@@ -1,0 +1,15 @@
+[project]
+name = "flows-dev"
+version = "0.1.0"
+description = "Development home for Metronome Flow engines that download portal reports through their backends instead of the UI."
+requires-python = ">=3.13"
+# Runtime libraries for work-PC installs. setup.ps1 installs exactly the versions in dependencies.lock.json; regenerate
+# it with scripts/lock_dependencies.py after changing this list. The versions match Metronome's Flow worker
+# (data_governance requirements.txt), so the engine can later run inside Metronome unchanged.
+dependencies = [
+  "playwright==1.62.0",
+  "httpx==0.28.1",
+  # Verify HTTPS against the Windows certificate store (corporate TLS inspection), as Metronome does.
+  "truststore",
+  "openpyxl==3.1.5",
+]

@@ -1,0 +1,28 @@
+# Local settings and install state
+.env
+.env.*
+!.env.example
+releases/
+runtime/
+dependencies/
+.downloads/
+current.json
+previous.json
+current-*.json
+.setup.lock
+
+# Maintainer tool output (scripts/lock_dependencies.py)
+artifacts/
+
+# Corporate material must never enter Git: downloads, exports, captures
+*.xlsx
+*.xls
+*.csv
+*.har
+downloads/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+vendor/
